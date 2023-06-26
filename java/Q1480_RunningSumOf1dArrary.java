@@ -9,7 +9,7 @@ package java;
  * Constraints:
  *  1 <= nums.length <= 1000
  *  -10^6 <= nums[i] <= 10^6
- * 
+ *  
  * Test:
  * 1. normal cases
  * 2. null input
