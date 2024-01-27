@@ -24,7 +24,12 @@ package java;
  * Test:
  * 1. normal cases
  * 2. null input
- * 3. edge cases:
+ * 3. edge cases: licensePlate.length = 1, licensePlate.length = 7
+ * 4. licensePlate contains digits, upper and lower case letters and space.
+ * 5. licensePlate does not contain any letters
+ * 6. edge cases: words.length = 1, words.length = 1000
+ * 7. edge cases: words[i].length = 1, words[i].length = 15
+ * 8. multiple shortest completing words
  */
 
 /* My solution. Use an int array for characters.
