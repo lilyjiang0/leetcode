@@ -27,6 +27,7 @@ package java;
 /* My solution. Look for the current minimum number and the biggest number after the current 
  * minimum, calculate the profit when the next minimum number is found and update the profit only 
  * when the it is greater.
+ * Can be further optimised.
  */
 class Solution {
     public int maxProfit(int[] prices) {
