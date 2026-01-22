@@ -1,0 +1,41 @@
+package java;
+
+/* array
+There is a hidden integer array arr that consists of n non-negative integers.
+It was encoded into another integer array encoded of length n - 1, such that encoded[i] = arr[i] 
+XOR arr[i + 1]. For example, if arr = [1,0,2,1], then encoded = [1,2,3].
+You are given the encoded array. You are also given an integer first, that is the first element 
+of arr, i.e. arr[0].
+Return the original array arr. It can be proved that the answer exists and is unique.
+
+Constraints:
+- 2 <= n <= 104
+- encoded.length == n - 1
+- 0 <= encoded[i] <= 105
+- 0 <= first <= 105
+
+Time complexity: O(n)
+Space complexity: O(n)
+
+Test: 
+- min/max size encoded, 1/ 103.
+- Encoded has integers which value = 0, value = 105.
+- All integers are equal in Encoded.
+- First has the value of 0 or 105.
+- There is a huge difference between value of encoded and first, e.g. encoded = [100, 56, 20, 99], 
+and first = 1.
+ */
+class Solution {
+    public int[] decode(int[] encoded, int first) {
+        // The original array has one more element than the encoded.
+        int[] result = new int[encoded.length + 1];
+        result[0] = first;
+        for (int i = 0; i < encoded.length; i++) {
+            // Because encoded[i] = decoded[i] ^ decoded[i + 1],
+            // decoded[i + 1] = encoded[i] ^ decoded[i].
+            // A XOR B = C, B = C XOR A.
+            result[i + 1] = encoded[i] ^ result[i];
+        }
+        return result;
+    }
+}
