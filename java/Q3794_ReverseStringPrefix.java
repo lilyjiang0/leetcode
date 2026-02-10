@@ -1,6 +1,6 @@
 package java;
 
-/**
+/** Two pointer, String.
  * You are given a string s and an integer k.
  * Reverse the first k characters of s and return the resulting string.
  * 
